@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    body{
+    body {
         @apply overflow-hidden
-     }
+    }
 }
-@tailwind utilities;
