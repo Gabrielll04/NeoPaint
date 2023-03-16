@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
 
 @layer base {
@@ -7,3 +8,6 @@
         @apply overflow-hidden
      }
 }
+=======
+@tailwind utilities;
+>>>>>>> e220d7e7dbfcecf82793dfaed007b1bae8071a23
