@@ -1,9 +1,11 @@
 import { Node } from 'reactflow'
 
 import Square from '@/Components/Square'
+import Circle from '@/Components/Circle'
 
 export const NODE_TYPES = {
   square: Square,
+  circle: Circle
 }
 
 export let ALL_NODES = [
@@ -31,7 +33,7 @@ export let ALL_NODES = [
   },
 ]satisfies Node[]
 
-export function addNode(setNodes: any) {
+export function addNode(setNodes: Function): void {
   const newNode: Node = {
     id: String(Math.floor(Math.random() * 1000)),
     type: 'square',
@@ -49,10 +51,6 @@ export function addNode(setNodes: any) {
   return
 }
 
-export function updateNodeLabel(label: any, setNodeLabel: any) {
-  setNodeLabel(label)
-}
-
-export function unSelectNodes(setSelectedNodes: any) {
-  setSelectedNodes()
-}
+// export function updateNodeLabel(label: string, selectedNodes: any) {
+//   selectedNodes.map((node: any) => node.setNodeLabel(label))
+// }
