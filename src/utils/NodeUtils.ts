@@ -33,16 +33,16 @@ export let ALL_NODES = [
   },
 ]satisfies Node[]
 
-export function addNode(setNodes: Function): void {
+export function addNode(setNodes: Function, typeNode: string): void {
   const newNode: Node = {
     id: String(Math.floor(Math.random() * 1000)),
-    type: 'square',
+    type: typeNode,
     position: {
       x: Math.floor(Math.random() * 1400),
       y: Math.floor(Math.random() * 900),
     },
     data: {
-      label: 'New Node',
+      label: 'new node',
     },
   }
   // let newArray = [...ALL_NODES, newNode]
