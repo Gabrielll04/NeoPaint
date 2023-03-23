@@ -1,5 +1,5 @@
 import EventEmitter from 'events'
-import { emitter } from './Square'
+import { emitter } from './Nodes/Square'
 import { IndexEmitter } from '../pages/index'
 import { useEffect, useState, Fragment } from 'react'
 import { FaPenNib } from 'react-icons/fa'

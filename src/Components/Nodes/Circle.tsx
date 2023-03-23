@@ -5,7 +5,7 @@ import '@reactflow/node-resizer/dist/style.css'
 
 import { IndexEmitter } from '@/pages'
 import { SquareType } from '@/Models/Node'
-import { SideBarEmitter } from './SideBar'
+import { SideBarEmitter } from '../SideBar'
 
 import { emitter } from './Square'
 
@@ -51,18 +51,30 @@ export default function Square(props: NodeProps): JSX.Element {
           <>
             <NodeResizer keepAspectRatio={keepAspectRatio} />
             <span className='font-bold text-white text-lg'>{nodeLabel}</span>
-            {/* <Handle
+            <Handle
               id='right'
               type='source'
               position={Position.Right}
-              className='!bg-teal-500 -right-4'
+              className='!bg-teal-500 '
             />
             <Handle
               id='left'
-              type='target'
+              type='source'
               position={Position.Left}
               className="!bg-teal-500"
-            /> */}
+            />
+            <Handle
+              id='top'
+              type='source'
+              position={Position.Top}
+              className="!bg-teal-500"
+            />
+            <Handle
+              id='bottom'
+              type='source'
+              position={Position.Bottom}
+              className="!bg-teal-500"
+            />
           </>
         ) : (<><span className='font-bold text-white text-lg'>{nodeLabel}</span></>)}
       </button>
